@@ -53,7 +53,7 @@
                         <td><input type="password" name="c_password" id="c_password" ng-model="c_password" required ng-pattern="password"><span style="color: red;" ng-show="validform.c_password.$dirty && validform.c_password.$invalid "><span ng-show="validform.c_password.$error.required">Please enter Password Again !!!</span><span ng-show="validform.c_password.$error.pattern">Confirm Password Does not Match With Password !!!</span></span></input></td>
                     </tr>
                     <tr>
-                        <td><button type="reset" ng-click = "reset()">Reset</button></td>
+                        <td><button ng-click = "reset()">Reset</button></td>
                         <td><button type="submit" ng-disabled="(validform.first_name.$dirty && validform.first_name.$invalid) || (validform.mobile.$dirty && validform.mobile.$invalid) || (validform.email.$dirty && validform.email.$invalid) || (validform.address.$dirty && validform.address.$invalid) || (validform.dob.$dirty && validform.dob.$invalid) || (validform.u_name.$dirty && validform.u_name.$invalid) || (validform.password.$dirty && validform.password.$invalid) || (validform.c_password.$dirty && validform.c_password.$invalid)" ng-click="submit()">Submit</button></td>
                     </tr>
                 </table>
@@ -73,7 +73,6 @@
                 $scope.u_name = "User Name";
                 $scope.password = "Passwd";
                 $scope.c_password = "Passwd";
-
             }
             $scope.reset();
         });
